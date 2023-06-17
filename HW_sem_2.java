@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class HW_sem_2 {
 
     public static void main(String[] args) {
-        int[] array = CreatArray(20,100);
+        int[] array = CreateArray(20,100);
         
         System.out.println("Первоначальный массив: " + Arrays.toString(array));        
         SortHeap(array);
@@ -19,7 +19,7 @@ public class HW_sem_2 {
      * @param num - число в рамках которого делается случайный отбор от 0 до num.
      * @return - функция создает и заполняет массив случайных целых чисел.
      */
-    public static int[] CreatArray (int size, int num){
+    public static int[] CreateArray (int size, int num){
             int[] array  = new int [size];
             for (int i = 0; i < array.length; i++) {
                 array[i] = (int)(Math.random()*num);
@@ -46,9 +46,7 @@ public class HW_sem_2 {
             heapify(array, i, 0);           
         }
     }    
-            
-           
-   
+               
     /**
      * Процедура для преобразования в двоичную кучу поддерева с корневым узлом i, что является индексом в array
      * @param array - массив
